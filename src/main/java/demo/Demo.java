@@ -16,11 +16,13 @@ public class Demo {
 		try(Session session = HibernateUtil.getSessionFactory().openSession()){     
 			t = session.beginTransaction();
 			Autor a = new Autor("Masashi","Kishimoto",50,"Masashi@xtec.cat");
+			Autor v= new Autor("ashi","oto",20,"ashi@xtec.cat");
 			ArrayList<String> generos = new ArrayList<String>();
 			generos.add("Shonen");
-			Manga m= new Manga("Naruto",generos,a);
+			Manga m= new Manga("Naruto",generos,v);
 			
 			session.save(a);
+			session.save(v);
 			session.save(m);
 			t.commit();
 		}catch(Exception e2) {
