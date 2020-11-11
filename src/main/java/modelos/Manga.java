@@ -1,5 +1,6 @@
 package modelos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -21,7 +22,7 @@ public class Manga {
 	@Column(name="titulo")
 	private String titulo;
 	@Column(name="generos")
-	private List<String> generos;
+	private ArrayList<String> generos;
 	@OneToOne
 	@JoinColumn(name="autor_id")
 	private Autor autor;
@@ -30,9 +31,8 @@ public class Manga {
 	public Manga() {
 		super();
 	}
-	public Manga(int id, String titulo, List<String> generos, Autor autor) {
+	public Manga(String titulo, ArrayList<String> generos, Autor autor) {
 		super();
-		this.id = id;
 		this.titulo = titulo;
 		this.generos = generos;
 		this.autor = autor;
@@ -56,7 +56,7 @@ public class Manga {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-	public void setGeneros(List<String> generos) {
+	public void setGeneros(ArrayList<String> generos) {
 		this.generos = generos;
 	}
 	public void setAutor(Autor autor) {
