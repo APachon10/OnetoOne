@@ -23,6 +23,7 @@ public class Demo {
 			
 			session.save(a);
 			session.save(v);
+			
 			session.save(m);
 			t.commit();
 		}catch(Exception e2) {

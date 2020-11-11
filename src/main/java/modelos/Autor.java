@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -22,6 +24,9 @@ public class Autor {
 	private int edad;
 	@Column(name="mail")
 	private String email;
+	/*@OneToOne(targetEntity = Manga.class)
+	@JoinColumn(name="manga_id")
+	private Manga m;*/
 	
 	//Contructores
 	public Autor() {
