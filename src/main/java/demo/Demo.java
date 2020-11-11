@@ -20,8 +20,6 @@ public class Demo {
 			generos.add("Shonen");
 			Manga m= new Manga("Naruto",generos,a);
 			
-			
-			
 			session.save(a);
 			session.save(m);
 			t.commit();
